@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <title>HTML FlexBox Template - Two columns liquid, side fixed, left content</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: #000000;
+            font: 90% Roboto, Arial, sans-serif;
+            font-weight: 300;
+        }
+
+        p {
+            padding: 0 10px;
+            line-height: 1.8;
+        }
+
+        ul li {
+            padding-right: 10px;
+            line-height: 1.6;
+        }
+
+        h3 {
+            padding: 5px 20px;
+            margin: 0;
+        }
+
+        div#header {
+            position: relative;
+        }
+
+        div#header h1 {
+            height: 80px;
+            line-height: 80px;
+            margin: 0;
+            padding-left: 10px;
+            background: #e0e0e0;
+            color: #1b6bff;
+        }
+
+        div#header a {
+            position: absolute;
+            right: 0;
+            top: 23px;
+            padding: 10px;
+            color: #1b6bff;
+        }
+
+        div#navigation {
+            background: #d1d1d1;
+        }
+
+        div#navigation li {
+            list-style: none;
+        }
+
+        div#extra {
+            background: #c0c0c0;
+            text-align: center;
+        }
+
+        div#footer {
+            background: #adadad;
+            color: #1b6bff;
+        }
+
+        div#footer p {
+            padding: 20px 10px;
+        }
+
+        div#wrapper {
+            float: left;
+            width: 100%;
+            margin-left: -200px
+        }
+
+        div#content {
+            margin-left: 200px
+        }
+
+        div#navigation {
+            float: right;
+            width: 200px;
+            color: #1b6bff;
+        }
+
+        div#extra {
+            float: right;
+            clear: right;
+            width: 200px;
+            color: #1b6bff;
+        }
+
+        div#footer {
+            clear: both;
+            width: 100%
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        function calc(){
+            var amount = document.getElementById('amount').value;
+            var kwp = document.getElementById('kwp').value;
+            val1 = amount*kwp*1000;
+            
+            if (amount != 0 && kwp != 0 && !(kwp.includes(',')) && !(amount.includes(',')))
+            {
+                sessionStorage.setItem("val1",val1);
+    
+                location.assign('Result.html');
+            }
+            else
+            {
+                alert("Daten ungueltig");
+            }
+        }
+            document.addEventListener('keydown', function(event) {
+                if(event.keyCode == 13) {
+                    calc();
+                }
+            });
+        
+    </script>
+
+<div id="container">
+    <div id="header">
+        <h1>IPCC</h1>
+    </div>
+    <div id="wrapper">
+        <div id="content">
+           <p><strong>Nachhaltigkeit der Energie unserer Schule:</strong></p>
+           <p>Die Energie, die an unserer Schule verwendet wird, ist schon sehr nachhaltig. Der Strom kommt von einem BHKW, dass als umweltfreundliche Energiequelle bezeichnet werden kann. Die restliche Energie, die von außen dazukommt, ist Ökostrom, also auch sehr klimafreundlich. Dazu kommt noch die Energie, die aus den schon vorhandenen Photovoltaikanlagen gewonnen wird. Alles im allem ist die Energie und der Storm die unsere Schule verwendet wird schon sehr klimafreundlich, aber man könnte die Klimafreundlichkeit noch verbessern, da BHKWs meistens mit Palmöl betrieben werden und die mit den Wartungsarbeiten einhergehende An- 
+            und Abfahrt der Wartungsarbeiter ist auch nicht gerade ideal. Trotzdem ist der Strom den ein BHKW liefert um einiges nachhaltiger als die Energie, die in anderen Kraftwerken produziert wird. Ein BHKW arbeitet um einiges effizienter als ein normales Kraftwerk und hat einen geringeren Kohlenstoffdioxid Ausstoß. Der Ökostrom kommt aus erneuerbaren Quellen, deshalb ist er sehr nachhaltig.
+            </p>
+            <p><string>Direkte und indirekte Folgen des Klimawandels: </string></p>
+            <p>Dieser Abschnitt des Berichts befasst sich mit dem Zusammenhang Umwelt. Also allgemein gesagt welchen Einfluss unser Projekt auf die Umwelt haben würde. 
+                Zuerst die direkten und indirekten Folgen und Konsequenzen des menschenverursachten Klimawandels kurz zusammengefasst: 
+                Zu den direkten Folgen zählen die steigenden Maximal - und Minimaltemperaturen. Es ist wissenschaftlich nachgewiesen, dass sich Menschen besser an Kälte als an Wärme anpassen können, außerdem könnten sich auch landwirtschaftliche und somit auch wirtschaftliche Probleme bei der Lebensmittelproduktion ergeben. Durch das allgemeine Steigen der Temperatur steigt auch die Temperatur des Ozeans und der Meeresspiegel steigt. Auch extreme Wetterereignisse wie Starkregen und Hagel werden als Folge des Klimawandels immer häufiger auftrete. Zudem nimmt Trockenheit und Dürre immer weiter zu. Gletscherschwund und das Schmelzen der Pole gehört auch zu den direkten Folgen des Klimawandels. 
+            </p>
+            <p><strong>Die indirekten Folgen, die aus den oben genannten direkten Folgen resultieren sind</strong></p>
+            <p>	-Die Zunahme der Hunger- und Wasserkrisen insbesondere in Entwicklungsländern
+                -Die Existenzbedrohung durch Überschwemmungen und Waldbrände <br>
+                -Die Gesundheitsrisiken durch Zunahme der Häufigkeit und Intensität von Hitzeextremen<br>
+                -Die wirtschaftlichen Folgen für die Beseitigung der Klimafolgeschäden<br>
+                -Die weitere Verbreitung von Schädlingen und Krankheitserregern<br>
+                -Der Verlust an Biodiversität durch begrenzte Anpassungsfähigkeit und -geschwindigkeit von Flora und Fauna<br>
+                -Die Ozeanversauerung durch erhöhte HCO3-Konzentrationen (Bicarbonat) im Wasser als Folge erhöhter CO2-Konzentrationen<br>
+                -Die Anpassungsnotwendigkeit in jeglichen Bereichen (z.B. Landwirtschaft, Forstwirtschaft, Energiewirtschaft, Infrastruktur, Tourismus, etc.)
+            </p>
+            <p><strong>Wie Klimafreundlich wären wir?</strong></p>
+            <p>Wie im Punkt “Woher kommt unsere Energie” schon beschrieben, ist unsere Energie schon sehr nachhaltig. Da aber Photovoltaikanlagen aber eine klimafreundlichere Lösung darstellen, würde sich unsere Nachhaltigkeit noch steigern. Wenn man den Ausbau der PV-Anlagen mit weiteren Maßnahmen zum Klimaschutz verbinden würde, könnte unsere Schule als ein positives Beispiel für Nachhaltigkeit dienen. 
+                Die ideale Variante wäre in diesem Zusammenhang die Zwischenvariante (1, Dächer), da man bei ihr noch ausreichend Platz für die normalen schulischen Aktivitäten hat. Außerdem müssten die Bäume und Rasenflächen nicht beschädigt werden. Die Wahrung der Natur, also Gras und Bäumen spielt, wenn man von Klimafreundlichkeit und Nachhaltigkeit redet eine große Rolle. Bäume, Büsche etc. sind wichtiger Bestandteil unseres örtlichen Ökosystems. Sie betreiben nicht nur Fotosynthese, sondern bieten auch Lebensraum für viele heimische Tierarten, deshalb ist es wichtig, dass wir nicht nur unseren C02 Ausstoß reduzieren, sondern auch bestehende Ökosysteme weltweit schützen. 
+            </p>
+            <p><strong>Deutschland 2050:</strong></p>
+            <p>Voraussichtlich wird es eine Temperaturerhöhung um 1,9 bis 2,3 Celsius gegenüber dem Beginn der Aufzeichnungen 1881 geben. 
+                Daraus resultiert ein massenhaftes Verschwinden von Tier-und Pflanzenarten. Zudem wird es häufiger zu extremen Wetterereignissen wie Starkregen, Sturzfluten und Überschwemmungen geben. Baumarten werden aussterben, dadurch wird sich der Trend zu Steppen vermehren.
+                </p>
+            <p><strong>Pflanzen - und Tierwelt</strong></p>
+            <p>Deutschland gehört zu der gemäßigten Zone. In der gemäßigten Zone finde sich vor allem Nadelwälder, Misch-und Laubwälder, aber auch teilweise Grassteppen bzw. Halbwüsten und Wüsten. Der Niederschlag reicht meist ganzjährig aus.
+                Durch den Klimawandel würden heimische Pflanzen die sich nicht schnell genug an die steigenden Temperaturen und extremen Wetterereignisse anpassen aussterben. So blieben nur noch die Pflanzen zurück die sich anpassen konnten. Auch den Tieren fehlt dadurch ein Teil ihrer potenziellen Nahrungsquelle oder ihres Lebensraums. Unser Ökosystem, in dem jede Pflanze und jedes Tier eine Rolle spielt, würde sehr große Schäden davontragen. 
+                </p>
+            <p><strong>Können wir etwas verändern?</strong></p>
+            <p>Diese Frage stellt man sich im Alltag sehr oft. Kann man mit einem kleinen Beitrag etwas gegen den weltweiten Klimawandel tun? Die Antworten sind gespalten. Wir an unsere Schule leisten einen kleinen Beitrag, indem wir versuchen unseren Energieverbrauch so klimaneutral wie möglich zu gestalten. Auch wenn wir nur eine Schule sind und nichts auf globaler Ebene ändern können, sollten wir trotzdem nicht mit dem Klimaschutz aufhören. Wir können als Beispiel vorangehen und somit hoffentlich andere Schulen oder Menschen inspirieren auch mehr auf die Umwelt zu achten. 
+                Die Antwort ist also: 
+                Nein auf globaler beende können wir nicht viel verändern, dazu hat unsere Schule nicht die Reichweite und den Einfluss.
+                ABER: 
+                Wir können etwas für uns verändern und somit, auch wenn es auch nicht viel ist, dem Klimawandel entgegenwirken.
+                </p>
+            
+        </div>
+    </div>
+    <div id="navigation">
+        <p><strong>Navigation Menu</strong></p>
+        <h3>Abschnitte</h3>
+        <ul>
+            <li><a href="LandingPage.html">Das Projekt</a></li>
+            <li><a  href="StandAktuell.html">Wie weit sind wir?</a></li>
+            <li> <a href="Rechnungen.html">Daten/Rechnungen</a></li>
+            <li><a href="Nachhaltigkeit.html">Nachhaltigkeit/Klima</a></li>
+            <li><a href="Bilder.html">Grafiken</a></li>
+        </ul>
+
+    </div>
+    <div id="extra">
+        <p><strong>Rechner</strong></p>
+        <h3>Gib deine Daten ein:</h3>
+        <p>
+            <label for "Amount">Anzahl der Module: </label>
+            <input type="text" id='amount' name='Amount'> <br>
+        </p>
+        <p>
+            <label for "Kwp">Kwp der Module: </label>
+            <input type="text" id="kwp" name="KWP"> <br>
+        </p>
+        <p>
+            <button onclick="calc()">berechnen</button>
+        </p>
+    </div>
+    <div id="footer"><p>IPCC Projekt IMP Klasse 10 von Marco Schmitt, Nico Eubel, Cilia Koller, Sarah Stahl, Niklas Schoening ---------- Quellen im Protokoll zu finden </p>
+    </div>
+</div>
+<script type="text/javascript">AddFillerLink("content", "navigation", "extra")</script>
+</body>
+</html>

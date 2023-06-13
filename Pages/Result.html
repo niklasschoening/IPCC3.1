@@ -1,19 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
-    <title>HTML FlexBox Template - Two columns liquid, side fixed, left content</title>
-    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-    <meta name="description" content="Use this HTML basic website two columns liquid, side fixed layout template where the main content is on the left column, the navigation menu and the extra stuff are on the right column.">
-    <meta name="generator" content="HAPedit 3.1">
-    <link rel="canonical" href="https://www.w3docs.com/snippets/html/layout_templates/23.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="HTML FlexBox Template - Two columns liquid, side fixed, left content" />
-    <meta property="og:description" content="Use this HTML basic website two columns liquid, side fixed layout template where the main content is on the left column, the navigation menu and the extra stuff are on the right column." />
-    <meta property="og:image" content="https://www.w3docs.com/build/images/logo-amp.png" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="192" />
-    <meta property="og:image:height" content="192" />
-    <meta property="og:image:alt" content="W3dcos" />
     <style type="text/css">
         html, body {
             margin: 0;
@@ -111,7 +98,7 @@
             clear: both;
             width: 100%
         }
-    </style>
+    </style>        <!--Im 'Style' Teil wird mit CSS das Design der Website festgelegt-->
 </head>
 
 <script>
@@ -122,9 +109,9 @@
         
         if (amount != 0 && kwp != 0 && !(kwp.includes(',')) && !(amount.includes(',')))     //prüft die Eingaben auf Fehler, wie eine ungültige Zahl oder Kommata. 
         {
-            sessionStorage.setItem("val1",val1);
+            sessionStorage.setItem("val1",val1);                                            //Variable wird Speicherplatz zugewiesem
 
-            location.assign('Result.html');
+            location.assign('Result.html');                                                 //Result.html wird aufgerufen
         }
         else
         {
@@ -149,7 +136,7 @@
             <p><strong>Die Produktion wurde berechnet</strong></p>
             <h3>Hier sind die Ergebnisse:</h3>
             <p>
-                Deine Produktion entspricht ca. <span id="value">val1</span> kw/h pro Jahr
+                Deine Produktion entspricht ca. <span id="value">val1</span> kw/h pro Jahr                              <!--Span wird id zugewiesen, damit man eine Variable einsetzen kann-->
             </p>
             <p>
                 Das ist genug, um <span  id="value2">val2</span> zweikoepfige Familie/n fuer ein Jahr zu versorgen
@@ -157,30 +144,23 @@
 
 
             <script>
-                val1 = sessionStorage.getItem('val1');
-                document.getElementById("value").innerHTML = val1;
-                document.getElementById("value2").innerHTML = Math.floor(val1/3000);
+                val1 = sessionStorage.getItem('val1');                                  //Variable wird aus dem Speicher in eine lokale Variable gegebem
+                document.getElementById("value").innerHTML = val1;                      //Variable val1 wird dem Feld mit der id 'value zugewiesen'
+                document.getElementById("value2").innerHTML = Math.floor(val1/3000);    //Wert wird Feld mit der id value2 zugewiesen
             </script>
         </div>
     </div>
     <div id="navigation">
         <p><strong>Navigation Menu</strong></p>
-        <h3>Texte</h3>
+        <h3>Abschnitte</h3>
         <ul>
-            <li>flex-direction</li>
-            <li>flex-wrap</li>
-            <li>justify-content</li>
-            <li>align-content</li>
-            <li>align-items</li>
+            <li><a href="LandingPage.html">Das Projekt</a></li>
+            <li><a  href="StandAktuell.html">Wie weit sind wir?</a></li>
+            <li> <a href="Rechnungen.html">Daten/Rechnungen</a></li>
+            <li><a href="Nachhaltigkeit.html">Nachhaltigkeit/Klima</a></li>
+            <li><a href="Bilder.html">Grafiken</a></li>
         </ul>
-        <h3>Grafiken</h3>
-        <ul>
-            <li>order</li>
-            <li>align-self</li>
-            <li>flex-grow</li>
-            <li>flex-shrink</li>
-            <li>flex-basis</li>
-        </ul>
+
     </div>
     <div id="extra">
         <p><strong>Rechner</strong></p>     <!--Überschriften-->
@@ -197,7 +177,7 @@
             <button onclick="calc()">berechnen</button>             <!--Button wird erstellt. In 'OnClick' wird angegeben, welche Funktion beim drücken ausgeführt wird-->
         </p>
     </div>
-    <div id="footer"><p>IPCC Projekt IMP Klasse 10 von Marco T. Schmitt, Nico Eubel, Cilia Koller, Sarah Stahl, Niklas Schoening </p>
+    <div id="footer"><p>IPCC Projekt IMP Klasse 10 von Marco Schmitt, Nico Eubel, Cilia Koller, Sarah Stahl, Niklas Schoening ---------- Quellen im Protokoll zu finden </p>
     </div>
 </div>
 </body>
